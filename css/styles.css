@@ -741,12 +741,12 @@ section Портфоліо */
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -765,18 +765,21 @@ section Портфоліо */
   transition: transform var(--transition-time) var(--transition-function);
 }
 
-.btn-close {
+.backdrop__btn-close {
   position: absolute;
-  width: 30px;
-  height: 30px;
   top: 8px;
   right: 8px;
+}
+
+.btn-close {
+  width: 30px;
+  height: 30px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
+  background: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
@@ -789,7 +792,7 @@ section Портфоліо */
   fill: var(--blue-activ-logo);
 }
 
-.modal .title {
+.registration-form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: calc(20 / 23);
@@ -806,7 +809,7 @@ section Портфоліо */
   margin-bottom: var(--description-indentation);
 }
 
-.registration_form .title-field {
+.form-field__title {
   font-size: 12px;
   line-height: calc(12 / 14);
   letter-spacing: 0.01em;
@@ -815,7 +818,7 @@ section Портфоліо */
   color: var(--description-text-color);
 }
 
-.input-field {
+.form-field__input {
   width: 100%;
   height: 100%;
   padding: 11px 12px 11px 42px;
@@ -829,30 +832,30 @@ section Портфоліо */
   transition: border-color var(--transition-time) var(--transition-function);
 }
 
-.field-input {
+.form-field__control {
   position: relative;
 }
 
-.backdrop .icon {
+.form-field__icon {
   position: absolute;
   left: 12px;
   top: 11px;
   transition: fill var(--transition-time) var(--transition-function);
 }
 
-.field-input:hover .input-field,
-.field-input:focus .input-field,
-.registration_form textarea:hover,
-.registration_form textarea:focus {
+.form-field__control:hover .form-field__input,
+.form-field__control:focus .form-field__input,
+.registration-form__comment:hover,
+.registration-form__comment:focus {
   border-color: var(--active-color);
 }
 
-.field-input:hover .icon,
-.field-input:focus .icon {
+.form-field__control:hover .form-field__icon,
+.form-field__control:focus .form-field__icon {
   fill: var(--active-color);
 }
 
-.registration_form textarea {
+.registration-form__comment {
   resize: none;
   padding: 12px 16px;
   border-radius: 4px;
@@ -861,12 +864,12 @@ section Портфоліо */
   transition: border var(--transition-time) var(--transition-function);
 }
 
-.registration_form textarea:hover,
-.registration_form textarea:focus {
+.registration-form__comment:hover,
+.registration-form__comment:focus {
   border: 1px solid var(--active-color);
 }
 
-.registration_form textarea::placeholder {
+.registration-form__comment::placeholder {
   font-size: 12px;
   line-height: calc(12 / 14);
   letter-spacing: 0.01em;
@@ -878,17 +881,15 @@ section Портфоліо */
   margin-bottom: 20px;
 }
 
-.registration_form .form-consent {
+.form-consent {
   margin-bottom: 30px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* text-align: center; */
 }
 
-.checkbox {
+.form-consent__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -899,7 +900,7 @@ section Портфоліо */
   overflow: hidden;
 }
 
-.check {
+.form-consent__check {
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -913,12 +914,12 @@ section Портфоліо */
   fill: white;
 }
 
-.checkbox:checked + .check {
+.form-consent__checkbox:checked + .form-consent__check {
   border-color: transparent;
   background-color: var(--blue-color-logo);
 }
 
-.registration_form .form-consent .title {
+.form-consent__title {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(14 / 24);
@@ -926,15 +927,15 @@ section Портфоліо */
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--description-text-color);
 }
 
-.registration_form .form-consent a {
+.form-consent__link {
   text-decoration-line: underline;
-  color: #2196f3;
+  color: var(--blue-color-logo);
 }
 
-.registration_form .btn {
+.form-consent__btn {
   width: 200px;
   height: 50px;
 
@@ -956,7 +957,7 @@ section Портфоліо */
   transition: box-shadow var(--transition-time) var(--transition-function);
 }
 
-.registration_form .btn:hover,
-.registration_form .btn:focus {
+.form-consent__btn:hover,
+.form-consent__.btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
