@@ -602,7 +602,7 @@ __________________ */
 /* portfolio.html
 section Портфоліо */
 
-.header-portfolio {
+.header__portfolio {
   border-bottom: 1px solid #ececec;
 }
 
@@ -611,17 +611,17 @@ section Портфоліо */
   padding-bottom: var(--container-pading);
 }
 
-.portfolio-button-lict {
+.portfolio__button-lict {
   margin-bottom: var(--header-indents);
   display: flex;
   justify-content: center;
 }
 
-.portpolio-buttom-item:not(:last-child) {
+.portpolio__buttom-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio-button {
+.portfolio__button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -640,13 +640,15 @@ section Портфоліо */
     box-shadow var(--transition-time) var(--transition-function);
 }
 
-.button-hover:hover,
-.button-hover:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   background-color: var(--active-color);
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+/* -------------------- */
 
 .portfolio-list {
   display: flex;
@@ -654,22 +656,22 @@ section Портфоліо */
   margin: -15px;
 }
 
-.portfolio-list-item {
+.portfolio-list__portfolio-card {
   margin: 15px;
 }
 
-.portfolio-list-link {
+.portfolio-card__link {
   display: block;
 
   transition: box-shadow var(--transition-time) var(--transition-function);
 }
 
-.portfolio .box {
+.portfolio-card__box {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .description {
+.portfolio-card__description {
   position: absolute;
   bottom: 0;
   /* opacity: 0; */
@@ -684,37 +686,37 @@ section Портфоліо */
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: var(--color-white);
   background: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
   transition: transform var(--transition-time) var(--transition-function);
 }
 
-.portfolio-list-link:hover,
-.portfolio-list-link:focus {
+.portfolio-card__link:hover,
+.portfolio-card__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list-link:hover .description,
-.portfolio-list-link:focus .description {
+.portfolio-card__link:hover .portfolio-card__description,
+.portfolio-card__link:focus .portfolio-card__description {
   /* opacity: 1; */
   transform: translateY(0);
 }
 
-.portfolio-img {
+.portfolio-card__img {
   display: block;
 }
 
-.t-desc {
+.portfolio-card__desc {
   padding: 20px 24px;
   border-right: 1px solid var(--border-card);
   border-bottom: 1px solid var(--border-card);
   border-left: 1px solid var(--border-card);
 }
 
-.portfolio-list-title {
+.portfolio-card__desc-title {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
@@ -722,7 +724,7 @@ section Портфоліо */
   margin-bottom: 4px;
 }
 
-.portfolio-list-description {
+.portfolio-card__desc-description {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
