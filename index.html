@@ -8,14 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
   </head>
 
   <body>
@@ -45,7 +41,7 @@
         </nav>
 
         <ul class="header__contacts-list list">
-          <li class="headerr__contacts-item">
+          <li class="header__contacts-item">
             <a
               class="header__contacts-link link"
               href="mailto:info@devstudio.com"
@@ -56,7 +52,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="headerr__contacts-item">
+          <li class="header__contacts-item">
             <a class="header__contacts-link link" href="tel:+380961111111">
               <svg class="header__contacts-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -443,28 +439,28 @@
           <p class="title footer__title">приєднуйтесь</p>
           <ul class="social list">
             <li class="social__list">
-              <a class="social__link" href="">
+              <a class="social__link footer__social-link" href="">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__list">
-              <a class="social__link" href="">
+              <a class="social__link footer__social-link" href="">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__list">
-              <a class="social__link" href="">
+              <a class="social__link footer__social-link" href="">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__list">
-              <a class="social__link" href="">
+              <a class="social__link footer__social-link" href="">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -552,7 +548,9 @@
             </div>
           </div>
 
-          <div class="registration-form__form-field form-field div-textarea">
+          <div
+            class="registration-form__form-field form-field registration-form__textarea"
+          >
             <label class="form-field__title" for="comment">Коментар</label>
             <textarea
               class="registration-form__comment"
